@@ -1192,7 +1192,7 @@
                     break;
                 case 81: // Q
                     if (isTyping || overlayShown) break;
-                    wsSend(UINT8[19]);
+                    wsSend(UINT8[18]);
                     pressed.q = 1;
                     break;
                 case 69: // E

@@ -89,6 +89,21 @@
                         <label><input type="checkbox" class="save" data-box-id="15" onchange="setCellPos($(this).is(':checked'));"> Cell position</label>
                         <label><input type="checkbox" class="save" data-box-id="16" onchange="setTextOutline($(this).is(':checked'));" checked> Text outline</label>
                         <label><input type="checkbox" class="save" data-box-id="17" onchange="setFood($(this).is(':checked'));"> Hide food</label>
+                        <table>
+                        TABLE
+                            <tr>
+                                <td><label>LB Text Color (you)</label>
+                                    <input class="form-control" id="lbColor" placeholder="Default HEX = FAA" value="" style="width:180px;"></td>
+                                <td><label>Name Text Color</label>
+                                    <input class="form-control" id="nameColor" placeholder="Default HEX = FFF" value="" style="width:180px;"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Cell Border Color</label>
+                                    <input class="form-control" id="cellBorderColor" placeholder="Default HEX = 000" value="" style="width:180px;"></td>
+                                <td><label>Cell Border Size</label>
+                                    <input class="form-control" id="cellBorderSize" placeholder="Default = 0 | Max = 50" value="" type="number" min="1" max="50" style="width:180px;"></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </form>

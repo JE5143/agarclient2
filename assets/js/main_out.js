@@ -1191,10 +1191,10 @@
                     pressed.w = 1;
                     break;
                 case 81: // Q
-                    if (isTyping || overlayShown || pressed.q) break;
-                    wsSend(UINT8[18]);
-                    pressed.q = 1;
-                    break;
+                    if ((!qPressed) && (!isTyping)) {
+                        sendUint8(18);
+                        qPressed = true;
+                    }
                 case 69: // E
                     if (isTyping || overlayShown) break;
                     wsSend(UINT8[22]);

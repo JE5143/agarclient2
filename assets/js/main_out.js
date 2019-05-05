@@ -505,11 +505,11 @@
         cellBorders: 1,
         infiniteZoom: 1,
         transparency: 0,
-        mapBorders: 0,
+        mapBorders: 1,
         sectors: 0,
         showPos: 0,
         hideFood: 0,
-        allowGETipSet: 0
+        allowGETipSet: 1
     };
     var pressed = {
         space: 0,

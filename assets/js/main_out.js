@@ -1191,12 +1191,10 @@
                     pressed.w = 1;
                     break;
                 case 81: // Q
-                    console.log("Testing");
-                    if (isTyping || overlayShown) {
-                        console.log("Testing2");
-                        wsSend(UINT8[18]);
-                        pressed.q = 1;
-                    }
+                    if (isTyping || overlayShown) break;
+                    wsSend(UINT8[19]);
+                    pressed.q = 1;
+                    break;
                 case 69: // E
                     if (isTyping || overlayShown) break;
                     wsSend(UINT8[22]);

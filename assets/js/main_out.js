@@ -493,7 +493,7 @@
         mouseZ = 1;
     var settings = {
         mobile: "createTouch" in document,
-        showMass: 0,
+        showMass: 1,
         showNames: 1,
         hideChat: 0,
         showTextOutline: 1,
@@ -501,9 +501,9 @@
         showSkins: 1,
         showMinimap: 1,
         darkTheme: 0,
-        hideGrid: 0,
+        hideGrid: 1,
         cellBorders: 1,
-        infiniteZoom: 0,
+        infiniteZoom: 1,
         transparency: 0,
         mapBorders: 0,
         sectors: 0,
@@ -1191,9 +1191,11 @@
                     pressed.w = 1;
                     break;
                 case 81: // Q
-                    if ((!qPressed) && (!isTyping)) {
-                        sendUint8(18);
-                        qPressed = true;
+                    console.log("Testing");
+                    if (isTyping || overlayShown) {
+                        console.log("Testing2");
+                        wsSend(UINT8[18]);
+                        pressed.q = 1;
                     }
                 case 69: // E
                     if (isTyping || overlayShown) break;

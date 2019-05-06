@@ -1,5 +1,5 @@
-<?php header( 'Location: /index.html' ) ;  ?>
-< ?php
+<?php 
+header( 'Location: /index.html' ) ;  
 
 function redirectTohttps() {
 

@@ -364,9 +364,11 @@
                 var server = !!(flags & 0x80);
                 var admin = !!(flags & 0x40);
                 var mod = !!(flags & 0x20);
+                var Member = !!(flags & 0x10);
                 if (server && name !== "SERVER") name = "[SERVER] " + name;
                 if (admin) name = "[ADMIN] " + name;
                 if (mod) name = "[MOD] " + name;
+                if (Member) name = "[Member] " + name;
                 var wait = Math.max(3000, 1000 + message.length * 150);
                 chat.waitUntil = syncUpdStamp - chat.waitUntil > 1000 ? syncUpdStamp + wait : chat.waitUntil + wait;
                 chat.messages.push({
